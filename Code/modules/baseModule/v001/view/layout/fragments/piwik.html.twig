@@ -1,0 +1,28 @@
+{# PIWIK #}
+{% if cookies['cookie-accept'] != null and cookies['cookie-accept'] == 1 %}
+    {% if config.getPiwik().getLink() != null and config.getPiwik().getTrackingId() != null %}
+        <script type="text/javascript">
+          let _paq = _paq || [];
+
+          {% if contact is defined and contact is not null %}
+          _paq.push(['setCustomVariable', 1, "PURL", "{{ contact.purl }}", 'visit']);
+          _paq.push(['setCustomData', 'cId', {{ contact.id }}]);
+          {% endif %}
+
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+
+          (function() {
+            let u = (('https:' === document.location.protocol) ? 'https' : 'http') + "://{{ config.getPiwik().getLink() }}/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', {{ config.getPiwik().getTrackingId() }}]);
+            let d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = "text/javascript";
+            g.defer = true;
+            g.async = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+          })();
+        </script>
+    {% endif %}
+{% endif %}

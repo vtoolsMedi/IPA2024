@@ -1,0 +1,1366 @@
+<?xml version="1.0"?>
+<template id="standard Template"
+          description="Vorlage Standard-Template">
+<!--    <variablegroup name="campaign" description="Campaign Einstellungen" variant="false" _class="campaign\models\campaign\template\VariableGroup">-->
+<!--    </variablegroup>-->
+    <!-- Firmendaten -->
+    <variablegroup name="company"
+                   description="Firmendaten"
+                   variant="false">
+        <variable name="name"
+                  defaultValue="Vögeli AG"
+                  description="Firma"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="description"
+                  defaultValue="Marketingproduktion und Druck"
+                  description="Firmenzusatz"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="street"
+                  defaultValue="Sägestrasse 21-23"
+                  description="Adresse"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="zip"
+                  defaultValue="3550"
+                  description="PLZ"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="place"
+                  defaultValue="Langnau i.E."
+                  description="Ort"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="email"
+                  defaultValue="voegeli@voegeli.ch"
+                  description="E-Mail"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="website"
+                  defaultValue="www.voegeli.ch"
+                  description="Website"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="number"
+                  defaultValue="034 409 10 10"
+                  description="Telefon"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="twitter"
+                  defaultValue=""
+                  description="Twitter"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="facebook"
+                  defaultValue=""
+                  description="Facebook"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="instagram"
+                  defaultValue=""
+                  description="Instagram"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="youtube"
+                  defaultValue=""
+                  description="Youtube"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="linkedin"
+                  defaultValue=""
+                  description="Linkedin"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="xing"
+                  defaultValue=""
+                  description="Xing"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+    </variablegroup>
+
+    <variablegroup name="layout" description="CI/CD (Farben, Icons, Logo)" variant="false" _class="campaign\models\campaign\template\VariableGroup">
+        <variable defaultValue="assets/images/logo.png" name="logo" description="Logo" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/logo.png" name="logoFooter" description="Logo-Footer" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/favicon.ico" name="favicon" description="favicon .ico Datei benötigt" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_normal.ttf" name="font" description="Schriftart Regular (.ttf)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_normal.ttf" name="fontWoff" description="Schriftart Regular (.woff)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_bold.ttf" name="fontBold" description="Schriftart Bold (.ttf)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_bold.ttf" name="fontBoldWoff" description="Schriftart Bold (.woff)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_italic.ttf" name="fontItalic" description="Schriftart Italic (.ttf)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/font/mulish_italic.ttf" name="fontItalicWoff" description="Schriftart Italic (.woff)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="#003b46" name="primaryColor" description="Primärfarbe" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" isColor="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="#ffffff" name="primaryTextColor" description="Textfarbe auf Primärfarbe" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" isColor="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="#000" name="secondaryColor" description="Sekundärfarbe" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" isColor="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="#ffffff" name="secondaryTextColor" description="Textfarbe auf Sekundärfarbe" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" isColor="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="0" name="noHeader" description="Header Ausblenden Ja/Nein" _class="po2\system\db\FieldDef">
+            <type type="DT_BOOLEAN" nillable="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/headerImage.jpg" name="headerImage" description="Headerbild" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/headerImageMobile.jpg" name="headerImageMobile" description="Headerbild Mobile" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="center" name="bgHorizontal" description="Headerbild - horizontale Ausrichtung" _class="po2\system\db\FieldDef">
+            <type type="DT_ENUM" accessModifier="private" doEncrypt="1" _class="po2\types\DataType">
+                <valueMap _class="array" key="left" value="Links" />
+                <valueMap _class="array" key="center" value="Zentriert" />
+                <valueMap _class="array" key="right" value="Rechts" />
+            </type>
+        </variable>
+        <variable defaultValue="top" name="bgVertical" description="Headerbild - vertikale Ausrichtung" _class="po2\system\db\FieldDef">
+            <type type="DT_ENUM" accessModifier="private" doEncrypt="1" _class="po2\types\DataType">
+                <valueMap _class="array" key="top" value="Oben" />
+                <valueMap _class="array" key="center" value="Zentriert" />
+                <valueMap _class="array" key="bottom" value="Unten" />
+            </type>
+        </variable>
+        <variable defaultValue="center" name="headerContainerBackground" description="Header - Container Hintergrund" _class="po2\system\db\FieldDef">
+            <type type="DT_ENUM" accessModifier="private" doEncrypt="1" _class="po2\types\DataType">
+                <valueMap _class="array" key="backdrop-blur-lg" value="Blur" />
+                <valueMap _class="array" key="bg-primary" value="Full Primary" />
+                <valueMap _class="array" key="bg-secondary" value="Full Secondary" />
+            </type>
+        </variable>
+        <variable defaultValue="0" name="sliderOn" description="Image Slider ein- / ausblenden" _class="po2\system\db\FieldDef">
+            <type type="DT_BOOLEAN" nillable="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/slider1.jpg" name="slider1" description="Bild Image Slider 1 (Seitenverhältnis: 8:3)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/slider2.jpg" name="slider2" description="Bild Image Slider 2 (Seitenverhältnis: 8:3)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/slider3.jpg" name="slider3" description="Bild Image Slider 3 (Seitenverhältnis: 8:3)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/slider4.jpg" name="slider4" description="Bild Image Slider 4 (Seitenverhältnis: 8:3)" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="0" name="sliderNumbersOn" description="Nummerierung Slider ein- / ausblenden" _class="po2\system\db\FieldDef">
+            <type type="DT_BOOLEAN" nillable="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="rgba(0,0,0,0.3)" name="sliderNumbersBG" description="Nummerierung Slider Hintergrundfarbe" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="assets/images/parallax.jpg" name="parallax" description="Zweite Parallax Bild" _class="po2\system\db\FieldDef">
+            <type type="DT_DATA_EXT" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable name="videoId" description="Video im Header - youtubeId" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="100" name="grayscale" description="Video im Header - Graufilter Video (0-100)" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="#000000" name="overlayBackground" description="Farbe Überlagerungsebene" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" isColor="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="0" name="overlayOpacity" description="Sichtbarkeit Überlagerungsebene (0-1)" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+    </variablegroup>
+
+    <variablegroup name="contactForm"
+                   description="Formular"
+                   variant="true">
+
+        <variable name="participationOn"
+                  description="An/Abmeldung ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+
+        <variable name="formInfoText"
+                  defaultValue="&lt;h4&gt;An- / Abmeldung&lt;/h4&gt;&lt;p&gt;Bitte überprüfen und ergänzen Sie Ihre Kontaktdaten.&lt;/p&gt;"
+                  description="Beschreibung Anmeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+                <valueMap value="Anschrift"
+                          key="{{Salutation}}"/>
+                <valueMap value="Anrede"
+                          key="{{contact.humanizedGender}}"/>
+                <valueMap value="Vorname"
+                          key="{{contact.firstname}}"/>
+                <valueMap value="Nachname"
+                          key="{{contact.lastname}}"/>
+                <valueMap value="Strasse"
+                          key="{{contact.street}}"/>
+                <valueMap value="PLZ"
+                          key="{{contact.zip}}"/>
+                <valueMap value="Ort"
+                          key="{{contact.place}}"/>
+                <valueMap value="Telefon"
+                          key="{{contact.phone}}"/>
+                <valueMap value="E-Mail"
+                          key="{{contact.email}}"/>
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+        </variable>
+
+        <variable name="register"
+                  defaultValue="Ja, ich nehme teil."
+                  description="Option - Anmeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="unregister"
+                  defaultValue="Nein, ich kann leider nicht teilnehmen."
+                  description="Option - Abmeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="companyOn"
+                  description="Firma ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="companyRequired"
+                  description="Firma Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="company"
+                  defaultValue="Firma"
+                  description="Label – Firma"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="genderOn"
+                  description="Anrede ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="genderRequired"
+                  description="Anrede Pflichtfeld ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="gender"
+                  defaultValue="Anrede"
+                  description="Label – Anrede"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="mr"
+                  defaultValue="Herr"
+                  description="Option – Herr "
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="mrs"
+                  defaultValue="Frau"
+                  description="Option – Frau "
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="firstnameOn"
+                  description="Vorname ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="firstnameRequired"
+                  description="Vorname Pflichtfeld ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="firstname"
+                  defaultValue="Vorname"
+                  description="Label – Vorname"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="lastnameOn"
+                  description="Nachname ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="lastnameRequired"
+                  description="Nachname Pflichtfeld ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="lastname"
+                  defaultValue="Nachname"
+                  description="Label – Nachname"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="streetOn"
+                  description="Strasse ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="streetRequired"
+                  description="Strasse Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="street"
+                  defaultValue="Strasse"
+                  description="Label – Strasse"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="zipOn"
+                  description="PLZ ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="zipRequired"
+                  description="PLZ Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="zip"
+                  defaultValue="PLZ"
+                  description="Label – PLZ"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="placeOn"
+                  description="Ort ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="placeRequired"
+                  description="Ort Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="place"
+                  defaultValue="Ort"
+                  description="Label – Ort "
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="emailOn"
+                  description="Email ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="emailRequired"
+                  description="Email Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="email"
+                  defaultValue="E-Mail"
+                  description="Label – E-Mail"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="phoneOn"
+                  description="Telefon ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="phoneRequired"
+                  description="Telefon Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="phone"
+                  defaultValue="Handynummer"
+                  description="Label – Telefonnummer"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eatingOn"
+                  description="Essenswunsch ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eatingRequired"
+                  description="Essenswunsch Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eating"
+                  defaultValue="Essenswunsch"
+                  description="Label – Essenswunsch"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eatingOptions"
+                  defaultValue="Vegan;Vegetarisch"
+                  description="Optionen – Essenswunsch (Semikolon getrennt angeben)"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eatingOtherOption"
+                  defaultValue="Andere"
+                  description="Letzte Optionen – Essenswunsch"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="eatingRemark"
+                  defaultValue="Essenswunsch Bemerkung"
+                  description="Label – Essenswunsch Bemerkung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+
+        <variable name="allergiesOn"
+                  description="Allergien ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="allergiesRequired"
+                  description="Allergien Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="allergies"
+                  defaultValue="Allergien"
+                  description="Label – Allergien"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="allergiesOptions"
+                  defaultValue="Laktoseintolerant;Zöliakie"
+                  description="Optionen – Allergien (Semikolon getrennt angeben)"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="allergiesOtherOption"
+                  defaultValue="Andere"
+                  description="Letzte Optionen – Allergien"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="allergiesRemark"
+                  defaultValue="Allergien Bemerkung"
+                  description="Label – Allergien Bemerkung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="remarkOn"
+                  description="Bemerkung ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="remarkRequired"
+                  description="Bemerkung Pflichtfeld ein- / ausblenden"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="remark"
+                  defaultValue="Bemerkung"
+                  description="Label – Bemerkung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable defaultValue="1" name="newsletterOn" description="Anmeldung zum Newsletter ein- / ausblenden" _class="po2\system\db\FieldDef">
+            <type type="DT_BOOLEAN" nillable="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable defaultValue="Für den Newsletter anmelden." name="newsletter" description="Label - Newsletter" _class="po2\system\db\FieldDef">
+            <type type="DT_STRING" nillable="1" accessModifier="private" doEncrypt="1" _class="po2\types\DataType" />
+        </variable>
+        <variable name="agbOn"
+                  description="AGB ein- / ausblenden"
+                  defaultValue="1"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="agbAccept"
+                  description="AGBs Checkbox"
+                  defaultValue="Ich bin mit dem unten geführten Hinweis einverstanden."
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="agbText"
+                  description="AGBs Text"
+                  defaultValue="Mit der Angabe Ihrer E-Mail-Adresse bestätigen Sie, dass diese von der {{ variables.company.name }} zu Informationszwecken betreffend dieser Veranstaltung verwendet werden kann. Die {{ variables.company.name }} wird Ihre E-Mail-Adresse nicht an Dritte weitergeben oder für andere Zwecke verwenden. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns eine E-Mail senden."
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  isHtml="true"
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"/>
+        </variable>
+        <variable name="submit"
+                  defaultValue="Absenden"
+                  description="Beschriftung Button zum Absenden des Formulars"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="errorCheckFields"
+                  defaultValue="Bitte überprüfen Sie die markierten Felder."
+                  description="Fehlermeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="errorChooseOptionMandatory"
+                  defaultValue="Wählen Sie eine dieser Optionen aus."
+                  description="Fehlermeldung – Optionsfeld"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="errorNoBlankField"
+                  defaultValue="Füllen Sie dieses Feld aus."
+                  description="Fehlermeldung – Pflichtfeld"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="errorInvalidEmail"
+                  defaultValue="Das ist keine gültige E-Mailadresse."
+                  description="Fehlermeldung – Email-Adresse"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="errorInvalidPhone"
+                  defaultValue="Falsches Telefonformat"
+                  description="Fehlermeldung- Telefon"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+    </variablegroup>
+    <!--Bestätigungsmail-->
+    <variablegroup name="confirmationMail"
+                   description="Bestätigungsmail"
+                   variant="true">
+        <variable name="sentFromAddress"
+                  defaultValue="vtools@voegeli.ch"
+                  description="Absenderadresse E-Mail (Achtung, eine Änderung der Absenderadresse muss zusätzlich konfiguriert werden)"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="sentFromName"
+                  defaultValue="Vögeli AG"
+                  description="Absenderadresse Anzeigename"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="bccAddress"
+                  defaultValue="vtools@voegeli.ch"
+                  description="BCC E-Mail"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+
+        <variable name="titleImage"
+                  defaultValue="assets/images/confHeaderImage.jpg"
+                  description="Titelbild für Mail"
+                  helpText="">
+            <type type="DT_DATA_EXT"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="subjectRegistered"
+                  defaultValue="Bestätigung Anmeldung "
+                  description="Betreff bei Anmeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+        <variable name="textRegisteredBeforeButton"
+                  defaultValue="&lt;p&gt;{{ Salutation }} {{ contact.humanizedGender }} {{ contact.lastname }}&lt;/p&gt; &lt;p&gt;Herzlichen Dank für Ihre Anmeldung! Wir freuen uns Sie an unserem Event begrüssen zu dürfen.&lt;br /&gt;&lt;/p&gt; &lt;p&gt;Alle notwendigen Infos zum Event finden Sie unter:&lt;/p&gt;"
+                  description="Text Angemeldet vor Button"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+                <valueMap value="Anschrift"
+                          key="{{Salutation}}"/>
+                <valueMap value="Anrede"
+                          key="{{contact.humanizedGender}}"/>
+                <valueMap value="Vorname"
+                          key="{{contact.firstname}}"/>
+                <valueMap value="Nachname"
+                          key="{{contact.lastname}}"/>
+                <valueMap value="Strasse"
+                          key="{{contact.street}}"/>
+                <valueMap value="PLZ"
+                          key="{{contact.zip}}"/>
+                <valueMap value="Ort"
+                          key="{{contact.place}}"/>
+                <valueMap value="Telefon"
+                          key="{{contact.phone}}"/>
+                <valueMap value="E-Mail"
+                          key="{{contact.email}}"/>
+
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+        </variable>
+
+        <variable name="buttonOn"
+                  description="Button ein/aus"
+                  defaultValue="0"
+                  helpText="">
+            <type type="DT_BOOLEAN"
+                  isKey="false"
+                  nillable="true"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+
+        <variable name="buttonText"
+                  defaultValue="Ihr persönlicher Link"
+                  description="Text Button"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"
+                  isHtml="false"/>
+        </variable>
+        <variable name="buttonLink"
+                  defaultValue="{{ base_url ~ contact.purl }}"
+                  description="Link Button"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"
+                  isHtml="false"/>
+        </variable>
+        <variable name="textRegisteredAfterButton"
+                  defaultValue="&lt;p&gt;Bei Fragen steht Ihnen gerne Frau Hannah Muster unter der Telefonnummer 034 123 12 34 oder per E-Mail vtools@voegeli.ch zur Verfügung.&lt;/p&gt;&lt;p&gt;Freundliche Grüsse&lt;br /&gt;Vögeli AG&lt;/p&gt;"
+                  description="Text Registered nach Button"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+                <valueMap value="Anschrift"
+                          key="{{Salutation}}"/>
+                <valueMap value="Anrede"
+                          key="{{contact.humanizedGender}}"/>
+                <valueMap value="Vorname"
+                          key="{{contact.firstname}}"/>
+                <valueMap value="Nachname"
+                          key="{{contact.lastname}}"/>
+                <valueMap value="Strasse"
+                          key="{{contact.street}}"/>
+                <valueMap value="PLZ"
+                          key="{{contact.zip}}"/>
+                <valueMap value="Ort"
+                          key="{{contact.place}}"/>
+                <valueMap value="Telefon"
+                          key="{{contact.phone}}"/>
+                <valueMap value="E-Mail"
+                          key="{{contact.email}}"/>
+
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+        </variable>
+
+        <variable name="subjectUnRegistered"
+                  defaultValue="Bestätigung Abmeldung"
+                  description="Betreff bei Abmeldung"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+
+        <variable name="textUnRegistered"
+                  defaultValue="&lt;p&gt;{{ Salutation }} {{ contact.humanizedGender }} {{ contact.lastname }}&lt;/p&gt; &lt;p&gt;Besten Dank für Ihre Rückmeldung. Schade können Sie an unserem Event nicht teilnehmen. Sollten Sie es sich doch noch anders überlegen, können Sie sich jederzeit bei Frau Hannah Musterfrau (&lt;a href=&quot;mailto:vtools@voegeli.ch&quot; &gt;vtools@voegeli.ch&lt;/a&gt;) melden.&lt;/p&gt;&lt;p&gt;Freundliche Grüsse&lt;br /&gt;Vögeli AG&lt;/p&gt;"
+                  description="Text oberhalb Button bei Abmeldung"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+                <valueMap value="Anschrift"
+                          key="{{Salutation}}"/>
+                <valueMap value="Anrede"
+                          key="{{contact.humanizedGender}}"/>
+                <valueMap value="Vorname"
+                          key="{{contact.firstname}}"/>
+                <valueMap value="Nachname"
+                          key="{{contact.lastname}}"/>
+                <valueMap value="Strasse"
+                          key="{{contact.street}}"/>
+                <valueMap value="PLZ"
+                          key="{{contact.zip}}"/>
+                <valueMap value="Ort"
+                          key="{{contact.place}}"/>
+                <valueMap value="Telefon"
+                          key="{{contact.phone}}"/>
+                <valueMap value="E-Mail"
+                          key="{{contact.email}}"/>
+                <valueMap value="Link zur persöndlichen Seite"
+                          key="{{ base_url ~ contact.purl }}"/>
+
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+        </variable>
+
+        <variable name="viewInBrowserButtonText"
+                  defaultValue="Mail in Browser öffnen"
+                  description="Link Mail in Browser öffnen"
+                  helpText=""
+                  variant="true">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+    </variablegroup>
+    <variablegroup name="registerPage"
+                   description="Neutrale LandingPage"
+                   variant="true">
+
+        <variable name="leadText"
+                  defaultValue="&lt;h3&gt;Herzlich Wilkommen&lt;/h3&gt;"
+                  description="Persönliche Begrüssung auf Headerbild"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+        </variable>
+        <variable name="infoText"
+                  defaultValue="&lt;h3&gt;Einladung&lt;/h3&gt;&lt;br&gt;&lt;p&gt;{{ Salutation }} {{ contact.humanizedGender }} {{ contact.lastname }}&lt;/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;"
+                  description="Text Infobereich"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="true"
+                  isHtml="true">
+
+                <valueMap value="Event Start"
+                          key="{{variables.event.startDateTime}}"/>
+                <valueMap value="Event Ende"
+                          key="{{variables.event.endDateTime}}"/>
+                <valueMap value="Event Titel"
+                          key="{{variables.event.title}}"/>
+                <valueMap value="Anmeldeschluss"
+                          key="{{variables.deadlinePage.deadlineDate}}"/>
+            </type>
+
+        </variable>
+        <variable name="ctaButtonTextRegister"
+                  defaultValue="Zur Anmeldung"
+                  description="Text CTA Button auf Headerbild"
+                  helpText="">
+            <type type="DT_STRING"
+                  isKey="false"
+                  nillable="false"
+                  dataLength=""
+                  displayLength=""
+                  defaultVisibility=""
+                  multiline="false"/>
+        </variable>
+    </variablegroup>
+
+<!--    <variablegroup name="layout" description="CI/CD (Farben, Icons, Logo)" variant="false" _class="campaign\models\campaign\template\VariableGroup">-->
+<!--    </variablegroup>-->
+
+<!--    <variablegroup name="baseText" description="Basis - Text" variant="true" _class="campaign\models\campaign\template\VariableGroup">-->
+<!--    </variablegroup>-->
+
+<!--    <variablegroup name="navigation" description="Navigation" variant="true" _class="campaign\models\campaign\template\VariableGroup">-->
+<!--    </variablegroup>-->
+
+<!--    <variablegroup name="footer" description="Footer" variant="true" _class="campaign\models\campaign\template\VariableGroup">-->
+<!--    </variablegroup>-->
+
+    <table name="appl\module\modules\contactModule\v001\model\entity\Contact"
+           label="Kontakte"
+           isMainTable="true"
+           isTypoModuleUsed="mail"
+           mailGenerateRoute="doBulkMail"
+           mailTemplates="Template 1,Template 2,Template 3"
+           mailTo="vtools@voegeli.ch"
+           mailToDisplayName="Vögeli AG"
+           mailToAddressses="vtools@voegeli.ch"/>
+
+</template>

@@ -1,0 +1,51 @@
+<section id="section-contactForm" data-nav="{{ variables.navigation.navRegistration }}" class="nav-point">
+    {{ include(template_from_string(variables.contactForm.formInfoText)) }}
+    {{ form_start(form) }}
+    {% if form.vars.valid == false %}
+
+    {% endif %}
+
+    {{ form.state ? form_row(form.state) }}
+    {{ form.company ? form_row(form.company) }}
+    {{ form.gender ? form_row(form.gender) }}
+    {{ form.firstname ? form_row(form.firstname) }}
+    {{ form.lastname ? form_row(form.lastname) }}
+    {{ form.email ? form_row(form.email) }}
+    {{ form.phone ? form_row(form.phone) }}
+    {{ form.street ? form_row(form.street) }}
+    {{ form.zip ? form_row(form.zip) }}
+    {{ form.place ? form_row(form.place) }}
+    {{ form.eating ? form_row(form.eating) }}
+    {{ form.eating? form_row(form.eatingRemark) }}
+    {{ form.allergies ? form_row(form.allergies) }}
+    {{ form.allergies ? form_row(form.allergiesRemark) }}
+
+    {% if form.addAttendance is defined %}
+        {{ form_row(form.addAttendance) }}
+        <div id="attendanceContainer" class="col-span-full">
+            {% include TwigManager.getTwigBasePath('attendanceModule/v001/view/attendanceModal.html.twig') %}
+        </div>
+
+    {% endif %}
+
+    {{ form.remark ? form_row(form.remark) }}
+
+    {% if showCaptcha %}
+        {% if captchaError is not null %}
+            <div class="col-span-full grid grid-cols-4 text-red-700">{{ captchaError }}</div>
+        {% endif %}
+        <div class="h-captcha" data-sitekey="{{ variables.campaign.captchaSiteKey }}"></div>
+    {% endif %}
+
+    <div class="col-span-full">
+        {{ form.newsletter ? form_row(form.newsletter) }}
+    </div>
+
+    <div class="col-span-full">
+        {{ form.agbAccept ? form_row(form.agbAccept) }}
+        {{ form.agbAccept ? include(template_from_string(variables.contactForm.agbText)) }}
+    </div>
+
+    {{ form_end(form) }}
+
+</section>

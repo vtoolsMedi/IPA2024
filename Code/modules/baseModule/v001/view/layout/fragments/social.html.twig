@@ -1,0 +1,42 @@
+<div class="flex flex-column w-full px-5 lg:p-0 lg:w-4/5 xl:w-1/5 mx-auto items-center justify-center my-5">
+    {% if variables.company.twitter is not empty %}
+        <div class="mx-5 basis-1/5">
+            <a target="_blank"
+               href="{% if 'http://' not in variables.company.twitter  and 'https://' not in variables.company.twitter %}http://{% endif %}{{ variables.company.twitter }}">
+                <i data-feather="twitter"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if variables.company.facebook is not empty %}
+        <div class="mx-5 basis-1/5 flex justify-center">
+            <a target="_blank"
+               href="{% if 'http://' not in variables.company.facebook  and 'https://' not in variables.company.facebook %}http://{% endif %}{{ variables.company.facebook }}">
+                <i data-feather="facebook"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if variables.company.instagram is not empty %}
+        <div class="mx-5 basis-1/5 flex justify-center">
+            <a target="_blank"
+               href="{% if 'http://' not in variables.company.instagram  and 'https://' not in variables.company.instagram %}http://{% endif %}{{ variables.company.instagram }}">
+                <i data-feather="instagram"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if variables.company.youtube is not empty %}
+        <div class="mx-5 basis-1/5 flex justify-center">
+            <a target="_blank"
+               href="{% if 'http://' not in variables.company.youtube  and 'https://' not in variables.company.youtube %}http://{% endif %}{{ variables.company.youtube }}">
+                <i data-feather="youtube"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if variables.company.linkedin is not empty %}
+        <div class="mx-5 basis-1/5 flex justify-center">
+            <a target="_blank"
+               href="{% if 'http://' not in variables.company.linkedin  and 'https://' not in variables.company.linkedin %}http://{% endif %}{{ variables.company.linkedin }}">
+                <i data-feather="linkedin"></i>
+            </a>
+        </div>
+    {% endif %}
+</div>

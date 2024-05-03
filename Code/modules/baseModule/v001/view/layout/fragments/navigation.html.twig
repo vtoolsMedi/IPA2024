@@ -1,0 +1,49 @@
+<nav class="navigation bg-transparent shadow-md">
+    <div class="content-container flex flex-wrap items-center justify-between px-5 bg-transparent">
+        <a href="{{ base_url }}" class="flex items-center space-x-3">
+            <img class="h-12" src="{{ resource.buildLink(variables.layout.logo) }}" alt="logo"/>
+{#            <span class="text-white">{{ variables.company.name }}</span>#}
+        </a>
+        <div id="navbarDisclaimer text-primary">{{ include(template_from_string(variables.navigation.disclaimer)) }}</div>
+        <button id="navbarButton" data-collapse-toggle="navbar-default" aria-controls="navbar-default" aria-expanded="false"
+                class="inline-flex items-center w-10 h-10 justify-center md:hidden">
+                    <i id="nav-icon-menu" class="text-primary" data-feather="menu"></i>
+                    <i id="nav-icon-x" class="hidden text-primary" data-feather="x"></i>
+        </button>
+        <div class="hidden md:flex w-full flex-col md:flex-row gap-5 md:w-auto" id="navbar-default">
+            <ul id="nav-list" class="font-medium flex flex-col p-0 mt-4 md:flex-row md:space-x-8 md:mt-0"></ul>
+            {% if variants is not empty %}
+            {% if variants|length > 1 %}
+                <ul id="lang-list" class="flex py-4 md:p-0 gap-2">
+                    {% for variant in variants %}
+                        {% if variants|length > 1 %}
+                            <li class="nav-item"><a class="nav-link hover-text-primary text-primary" href="?variant={{ variant }}">{{ variant|upper }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<script>
+  function createNavigation() {
+    // creating navigation
+    let newLine, title, link;
+
+    let ctaHeader = $('#ctaHeader');
+    $("section.nav-point").each((index, section) => {
+      title = $(section).data('nav');
+      link = '#' + $(section).attr('id');
+
+      newLine = '<li class="nav-item md:py-0 py-3">' + '<a class="nav-link page-scroll hover-text-primary text-primary w-full" href="' + link + '">' + title + '</a>' + '</li>';
+
+      $('#nav-list').append($(newLine));
+      if (ctaHeader.attr('href') === undefined) {
+        ctaHeader.attr('href', link);
+      }
+    });
+  }
+
+</script>

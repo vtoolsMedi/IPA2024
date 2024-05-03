@@ -1,0 +1,61 @@
+{% extends TwigManager.getTwigBasePath('baseModule/v001/view/layout/base.html.twig') %}
+
+{% if contact is defined %}
+    {% set leadText = variables.landingPage.leadText %}
+    {% set infoText = variables.landingPage.infoText %}
+    {% set ctaButtonText = variables.landingPage.ctaButtonText %}
+{% else %}
+    {% set leadText = variables.registerPage.leadText %}
+    {% set infoText = variables.registerPage.infoText %}
+    {% set ctaButtonText = variables.registerPage.ctaButtonTextRegister %}
+{% endif %}
+
+{% block headerText %}
+    {{ include(template_from_string(leadText)) }}
+{% endblock %}
+
+{% block ctaInHeaderText %}{{ ctaButtonText }}{% endblock %}
+
+{% block body %}
+    <style>
+        {% include TwigManager.getTwigBasePath('landingModule/v001/view/landing.css.twig') %}
+        {% include TwigManager.getTwigBasePath('landingModule/v001/view/slider/slider.css.twig') %}
+    </style>
+
+    <section id="section-invite" data-nav="{{ variables.navigation.navInfos }}" class="content-container nav-point">
+        <div class="py-5">
+            {{ include(template_from_string(infoText)) }}
+            {% if accordions != "" %}
+                {{ include(template_from_string(accordions)) }}
+            {% endif %}
+        </div>
+    </section>
+
+{#    <section id="section-infos" class="py-10">#}
+{#        {% include TwigManager.getTwigBasePath('landingModule/v001/view/eventInfos/eventInfos.html.twig') %}#}
+{#    </section>#}
+
+{#    <div class="content-container">#}
+{#        {% if files != "" %}#}
+{#            {{ include(template_from_string(files)) }}#}
+{#        {% endif %}#}
+
+{#        {% if speakers != "" %}#}
+{#            {{ include(template_from_string(speakers)) }}#}
+{#        {% endif %}#}
+{#    </div>#}
+
+    {% if variables.layout.sliderOn %}
+        {% include TwigManager.getTwigBasePath('landingModule/v001/view/slider/slider.html.twig') %}
+    {% else %}
+        <div class="parallax2 h-[40rem] w-100 bg-cover overflow-hidden border-primary border-[22px] border-solid mt-12 bg-center"
+             style="background-image:url({{ resource.buildLink(variables.layout.parallax) }})" ></div>
+    {% endif %}
+
+    <div class="content-container">
+        {% if contactForm is defined %}
+            {{ include(template_from_string(contactForm)) }}
+        {% endif %}
+    </div>
+
+{% endblock %}

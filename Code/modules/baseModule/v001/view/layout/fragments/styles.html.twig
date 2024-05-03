@@ -1,0 +1,9 @@
+<link href="{{ resource.buildLink(variables.layout.favicon) }}" rel="icon" type="image/x-icon">
+<link href="{{ base_url }}assets/css/output.css?v={{ outputCssVersion }}" rel="stylesheet">
+<link href="{{ base_url }}stylesheet.css" rel="stylesheet">
+<link href="{{ base_url }}src/lib/zExtLib/js/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+<link href="{{ base_url }}src/lib/zExtLib/js/lightbox/css/lightbox.min.css" rel="stylesheet"/>
+{#    <link href="{{ base_url }}src/lib/zExtLib/js/micromodal/micromodal.css" rel="stylesheet"/>#}
+
+{% block stylesheets %}{% endblock %}
+{{ variables.campaign.customCSS|raw }}

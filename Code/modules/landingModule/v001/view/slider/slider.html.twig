@@ -1,0 +1,75 @@
+
+
+
+
+
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides">
+        {% if variables.layout.sliderNumbersOn %}<div class="numbertext">1 / 4</div>{% endif %}
+        <img src="{{ resource.buildLink(variables.layout.slider1) }}" style="width:100%" class="img-1">
+    </div>
+
+    <div class="mySlides">
+        {% if variables.layout.sliderNumbersOn %}<div class="numbertext">2 / 4</div>{% endif %}
+        <img src="{{ resource.buildLink(variables.layout.slider2) }}" style="width:100%" class="img-2">
+    </div>
+
+    <div class="mySlides">
+        {% if variables.layout.sliderNumbersOn %}<div class="numbertext">3 / 4</div>{% endif %}
+        <img src="{{ resource.buildLink(variables.layout.slider3) }}" style="width:100%" class="img-3">
+    </div>
+
+    <div class="mySlides">
+        {% if variables.layout.sliderNumbersOn %}<div class="numbertext">4 / 4</div>{% endif %}
+        <img src="{{ resource.buildLink(variables.layout.slider4) }}" style="width:100%" class="img-4">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+
+
+
+
+
+
+
+

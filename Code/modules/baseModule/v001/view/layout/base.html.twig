@@ -1,0 +1,75 @@
+{% set month = variables.baseText.months|split(',') %}
+{% set weekday = variables.baseText.weekdays|split(',') %}
+
+{% if contact is defined %}
+
+    {% if contact.gender == 2 %}
+        {% set Salutation = variables.baseText.salutFemale %}
+    {% else %}
+        {% set Salutation = variables.baseText.salutMale %}
+    {% endif %}
+
+{% endif %}
+
+<!--
+       _              _
+__   _| |_ ___   ___ | |___
+\ \ / / __/ _ \ / _ \| / __|
+ \ V /| || (_) | (_) | \__ \
+  \_/  \__\___/ \___/|_|___/
+
+by Vögeli AG
+Marketingproduktion & Druck
+www.voegeli.ch
+
+-->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>{% block title %}{{ variables.navigation.tabName }}{% endblock %}</title>
+
+    {% include TwigManager.getTwigBasePath('baseModule/v001/view/layout/fragments/styles.html.twig') %}
+
+    {% include TwigManager.getTwigBasePath('baseModule/v001/view/layout/fragments/javascript.html.twig') %}
+
+    {# PIWIK #}
+    {% include TwigManager.getTwigBasePath('baseModule/v001/view/layout/fragments/piwik.html.twig') %}
+
+</head>
+
+<body class="text-black">
+
+{% if not variables.layout.noHeader %}
+    <header class="relative overflow-hidden parallax-image h-screen">
+        <div class="flex flex-col justify-center align-middle absolute inset-0">
+            <div class="self-center {{ variables.layout.headerContainerBackground }} p-4 rounded-lg text-white p-5 text-2xl">
+                {% block headerText %}{% endblock %}
+            </div>
+                <a id="ctaHeader" class="self-center mt-20 flex flex-col items-center gap-2 text-white page-scroll {{ variables.layout.headerContainerBackground }} p-4">
+                    {% block ctaInHeaderText %}{% endblock %}
+                    <i data-feather="arrow-down-circle" class="text-white w-8 h-8 stroke-white"></i>
+                </a>
+        </div>
+    </header>
+{% else %}
+    <section class="py-10">
+    </section>
+{% endif %}
+
+{% include TwigManager.getTwigBasePath('baseModule/v001/view/layout/fragments/navigation.html.twig') %}
+
+<div class="bg-white">
+    {% block body %}{% endblock %}
+</div>
+
+</body>
+{% include TwigManager.getTwigBasePath('baseModule/v001/view/layout/footer.html.twig') %}
+
+</html>

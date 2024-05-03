@@ -1,0 +1,7 @@
+{% extends TwigManager.getTwigBasePath('baseModule/v001/view/layout/base.html.twig') %}
+
+{% block headerText %}
+    {{ include(template_from_string(variables.privacy.infoDeletedContact)) }}
+{% endblock %}
+
+{% block ctaInHeaderText %}{{ variables.landingPage.ctaButtonText }}{% endblock %}
